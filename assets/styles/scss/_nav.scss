@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1250px;
+    height: 7vh;
+    margin: auto;
+
+    h1 {
+        position: absolute;
+        left: 2vh;
+        color: white;
+        font-size: 2rem;
+    }
+
+    p {}
+
+    a {
+        position: absolute;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: white;
+            transform: scale(0);
+            transition: .2s all ease-out;
+        }
+
+        &:hover::after {
+            cursor: pointer;
+            transform: scale(1);
+        }
+    }
+
+
+}

@@ -9,6 +9,6 @@ function build(){
 }
 
 function watchScss(){
-    watch(['../../assets/styles/scss/*.scss'])
+    watch(['../../assets/styles/scss/*.scss'], build)
 }
 exports.default = series(build, watchScss)
