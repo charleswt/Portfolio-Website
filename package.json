@@ -1,0 +1,12 @@
+{
+    "name": "Portfolio-Website",
+    "authors": "charleswt",
+    "version": "1.0.0",
+    "main": "./",
+    "dependencies": {
+        "gulp": "^5.0.0",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.77.1",
+        "typescript": "^5.4.5"
+    }
+}
