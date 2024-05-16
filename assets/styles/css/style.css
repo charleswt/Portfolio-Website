@@ -87,3 +87,27 @@ header a:hover::after {
   cursor: pointer;
   transform: scale(1);
 }
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1400px;
+  color: white;
+}
+main h2 {
+  display: flex;
+  justify-content: start;
+  font-size: 1.5rem;
+}
+main h3 {
+  font-size: 1.8rem;
+}
+main ul {
+  margin: 2rem auto;
+  width: 90%;
+}
+main ul li {
+  font-size: 1.2rem;
+  margin: 1rem;
+  left: 0;
+}

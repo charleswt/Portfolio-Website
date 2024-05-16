@@ -1,0 +1,27 @@
+main {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1400px;
+    color: white;
+
+    h2 {
+        display: flex;
+        justify-content: start;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    ul {
+        margin: 2rem auto;
+        width: 90%;
+        
+        li {
+            font-size: 1.2rem;
+            margin: 1rem;
+            left: 0;
+        }
+    }
+}
