@@ -2,13 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 html {
   background-image: linear-gradient(to bottom, rgb(65, 65, 65), rgb(105, 105, 105));
-  height: 100%;
-  max-height: 100vh;
   scroll-behavior: smooth;
 }
 
@@ -55,7 +52,6 @@ ul {
 
 header {
   display: flex;
-  justify-content: space-evenly;
   max-width: 1250px;
   height: 7vh;
   margin: auto;
@@ -66,13 +62,31 @@ header h1 {
   color: white;
   font-size: 2rem;
 }
-header a {
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+header ul li {
+  color: white;
+  font-size: 2rem;
+}
+header ul li a {
+  margin: 0 0.5rem;
+}
+header ul li a img {
+  height: 2rem;
+}
+header p {
+  margin: 0 auto;
+}
+header p a {
   position: absolute;
   font-size: 2rem;
   color: white;
   text-decoration: none;
 }
-header a::after {
+header p a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -83,7 +97,7 @@ header a::after {
   transform: scale(0);
   transition: 0.2s all ease-out;
 }
-header a:hover::after {
+header p a:hover::after {
   cursor: pointer;
   transform: scale(1);
 }
@@ -100,6 +114,7 @@ main h2 {
   font-size: 1.5rem;
 }
 main h3 {
+  text-align: center;
   font-size: 1.8rem;
 }
 main ul {
@@ -110,4 +125,24 @@ main ul li {
   font-size: 1.2rem;
   margin: 1rem;
   left: 0;
+}
+
+#projects ul {
+  display: flex;
+}
+#projects ul p {
+  z-index: 999;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  position: absolute;
+  font-weight: 900;
+  text-shadow: 0 0 8px black;
+}
+#projects ul a img {
+  transition: 0.2s;
+  width: 100%;
+  filter: blur(4px);
+}
+#projects ul a img:hover {
+  filter: blur(0px);
 }

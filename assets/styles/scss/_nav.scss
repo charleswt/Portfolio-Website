@@ -1,6 +1,5 @@
 header {
     display: flex;
-    justify-content: space-evenly;
     max-width: 1250px;
     height: 7vh;
     margin: auto;
@@ -12,9 +11,27 @@ header {
         font-size: 2rem;
     }
 
-    p {}
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        li {
+            color: white;
+            font-size: 2rem;
+            a {
+                margin: 0 .5rem;
+                img {
+                    height: 2rem;
+                }
+            }
+            p {
+            }
+        }
+    }
 
-    a {
+    p {
+        margin: 0 auto;
+       a {
         position: absolute;
         font-size: 2rem;
         color: white;
@@ -36,5 +53,8 @@ header {
             cursor: pointer;
             transform: scale(1);
         }
+    } 
     }
+
+    
 }
