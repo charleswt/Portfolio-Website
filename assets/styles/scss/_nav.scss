@@ -11,6 +11,11 @@ header {
         font-size: 2rem;
     }
 
+            @media screen and (width <= 1650px) {
+                ul {
+                    margin: 1rem;
+                }
+            }
     ul {
         display: flex;
         justify-content: space-evenly;

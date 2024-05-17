@@ -27,9 +27,36 @@ main {
   }
 }
 
+.about-p {
+    line-height: 2rem;
+    text-indent: 3rem;
+}
+
+.top img {
+    &:hover {
+        cursor: pointer;
+    }
+    width: 3%;
+    position: fixed;
+    left: 30%;right: 0;top: 0;
+    margin: auto;
+    transition: .2s;
+}
+
+#about, #skills, #projects {
+    height: 100vh;
+}
+
 #projects {
+    @media screen and (width <= 1230px) {
+        ul {
+            flex-direction: column;
+        }
+    }
   ul {
     display: flex;
+    
+    }
     p {
         
         z-index: 999;
@@ -51,4 +78,4 @@ main {
       }
     }
   }
-}
+
