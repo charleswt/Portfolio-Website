@@ -132,9 +132,25 @@ main ul li {
   left: 0;
 }
 
-.about-p {
+#about {
+  margin-top: 15%;
+  font-size: 1.5rem;
+}
+#about img {
+  margin: 0.5rem;
+  float: left;
+  width: 250px;
+}
+#about p {
   line-height: 2rem;
   text-indent: 3rem;
+}
+@media screen and (width <= 430px) {
+  #about img {
+    display: flex;
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .top img {
@@ -150,7 +166,9 @@ main ul li {
   cursor: pointer;
 }
 
-#about, #skills, #projects {
+#about,
+#skills,
+#projects {
   height: 100vh;
 }
 
