@@ -125,6 +125,11 @@ header p a:hover::after {
   header ul {
     justify-content: end;
   }
+  .contact {
+    position: absolute;
+    top: -10rem;
+    right: 0;
+  }
   .a-img-1, .a-img-2, .a-img-3 {
     position: absolute;
     right: 0;
@@ -136,28 +141,15 @@ header p a:hover::after {
     top: 4rem;
   }
 }
-@media screen and (width <= 500px) {
+@media screen and (width <= 400px) {
   header p {
     margin: 0 5rem 0 0;
   }
   header p a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   header ul li {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (width <= 410px) {
-  header p {
-    margin: 0 5rem 0 0;
-  }
-  header p a {
-    font-size: 1.3rem;
-  }
-  .contact {
-    position: absolute;
-    top: -10rem;
-    right: 0;
+    font-size: 1.4rem;
   }
 }
 main {
