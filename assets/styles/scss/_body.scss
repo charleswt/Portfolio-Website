@@ -55,20 +55,21 @@ main {
   }
   width: 3%;
   position: fixed;
-  left: 30%;
+  left: 50%;
   right: 0;
   top: 0;
   margin: auto;
   transition: 0.2s;
+  min-width: 30px;
 }
 
-#about,
 #skills,
 #projects {
-  height: 100vh;
+  margin-top: 50vh;
 }
 
 #projects {
+  min-height: 100vh;
   @media screen and (width <= 1230px) {
     ul {
       flex-direction: column;

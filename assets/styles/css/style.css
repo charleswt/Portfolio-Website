@@ -56,16 +56,16 @@ header {
   height: 7vh;
   margin: auto;
 }
+@media screen and (width <= 1650px) {
+  header h1 {
+    top: -100px;
+  }
+}
 header h1 {
   position: absolute;
   left: 2vh;
   color: white;
   font-size: 2rem;
-}
-@media screen and (width <= 1650px) {
-  header ul {
-    margin: 1rem;
-  }
 }
 header ul {
   display: flex;
@@ -107,6 +107,59 @@ header p a:hover::after {
   transform: scale(1);
 }
 
+@media screen and (width <= 1000px) {
+  header p a {
+    font-size: 1.5rem;
+  }
+  header ul li {
+    font-size: 1.5rem;
+  }
+  header ul li a img {
+    width: 1.5rem;
+  }
+}
+@media screen and (width <= 800px) {
+  header p {
+    margin: 0 7rem 0 0;
+  }
+  header ul {
+    justify-content: end;
+  }
+  .a-img-1, .a-img-2, .a-img-3 {
+    position: absolute;
+    right: 0;
+  }
+  .a-img-2 {
+    top: 2rem;
+  }
+  .a-img-3 {
+    top: 4rem;
+  }
+}
+@media screen and (width <= 500px) {
+  header p {
+    margin: 0 5rem 0 0;
+  }
+  header p a {
+    font-size: 1.3rem;
+  }
+  header ul li {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (width <= 410px) {
+  header p {
+    margin: 0 5rem 0 0;
+  }
+  header p a {
+    font-size: 1.3rem;
+  }
+  .contact {
+    position: absolute;
+    top: -10rem;
+    right: 0;
+  }
+}
 main {
   margin: 0 auto;
   width: 80%;
@@ -156,22 +209,25 @@ main ul li {
 .top img {
   width: 3%;
   position: fixed;
-  left: 30%;
+  left: 50%;
   right: 0;
   top: 0;
   margin: auto;
   transition: 0.2s;
+  min-width: 30px;
 }
 .top img:hover {
   cursor: pointer;
 }
 
-#about,
 #skills,
 #projects {
-  height: 100vh;
+  margin-top: 50vh;
 }
 
+#projects {
+  min-height: 100vh;
+}
 @media screen and (width <= 1230px) {
   #projects ul {
     flex-direction: column;
