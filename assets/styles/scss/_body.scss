@@ -20,6 +20,7 @@ main {
     width: 90%;
 
     li {
+      min-width: 300px;
       font-size: 1.2rem;
       margin: 1rem;
       left: 0;
@@ -70,13 +71,31 @@ main {
 
 #projects {
   min-height: 100vh;
-  @media screen and (width <= 1230px) {
+  @media screen and (width < 510px) {
+    ul li p {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (width > 700px) {
+    
     ul {
-      flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1);
+    }
+  }
+  @media screen and (width > 1425px) {
+    ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1);
     }
   }
   ul {
-    display: flex;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto, auto);
+    gap: 1rem;
   }
   p {
     z-index: 999;
@@ -93,6 +112,7 @@ main {
       }
       transition: 0.2s;
       width: 100%;
+      min-width: 300px;
       filter: blur(4px);
     }
   }
