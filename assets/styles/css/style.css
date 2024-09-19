@@ -5,7 +5,7 @@
 }
 
 html {
-  background-image: linear-gradient(to bottom, rgb(65, 65, 65), rgb(105, 105, 105));
+  background-color: rgb(27, 26, 87);
   scroll-behavior: smooth;
 }
 
@@ -41,7 +41,8 @@ code {
   font-family: inherit;
 }
 
-button:hover, input:hover {
+button:hover,
+input:hover {
   cursor: pointer;
 }
 
@@ -50,216 +51,155 @@ ul {
   list-style: none;
 }
 
+/* NAVIGATION */
+
 header {
+  color: WHITE;
   display: flex;
-  max-width: 1250px;
-  height: 7vh;
-  margin: auto;
-}
-@media screen and (width <= 1650px) {
-  header h1 {
-    top: -100px;
-  }
-}
-header h1 {
-  position: absolute;
-  left: 2vh;
-  color: white;
-  font-size: 2rem;
-}
-header ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-}
-header ul li {
-  color: white;
-  font-size: 2rem;
-}
-header ul li a {
-  margin: 0 0.5rem;
-}
-header ul li a img {
-  height: 2rem;
-}
-header p {
-  margin: 0 auto;
-}
-header p a {
-  position: absolute;
-  font-size: 2rem;
-  color: white;
-  text-decoration: none;
-}
-header p a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background: white;
-  transform: scale(0);
-  transition: 0.2s all ease-out;
-}
-header p a:hover::after {
-  cursor: pointer;
-  transform: scale(1);
-}
-
-@media screen and (width <= 1000px) {
-  header p a {
-    font-size: 1.5rem;
-  }
-  header ul li {
-    font-size: 1.5rem;
-  }
-  header ul li a img {
-    width: 1.5rem;
-  }
-}
-@media screen and (width <= 800px) {
-  header p {
-    margin: 0 7rem 0 0;
-  }
-  header ul {
-    justify-content: end;
-  }
-  .contact {
-    position: absolute;
-    top: -10rem;
-    right: 0;
-  }
-  .a-img-1, .a-img-2, .a-img-3 {
-    position: absolute;
-    right: 0;
-  }
-  .a-img-2 {
-    top: 2rem;
-  }
-  .a-img-3 {
-    top: 4rem;
-  }
-}
-@media screen and (width <= 400px) {
-  header p {
-    margin: 0 5rem 0 0;
-  }
-  header p a {
-    font-size: 1.4rem;
-  }
-  header ul li {
-    font-size: 1.4rem;
-  }
-}
-main {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 1400px;
-  color: white;
-}
-main h2 {
-  display: flex;
-  justify-content: start;
-  font-size: 1.5rem;
-}
-main h3 {
-  text-align: center;
-  font-size: 1.8rem;
-}
-main ul {
-  margin: 2rem auto;
-  width: 90%;
-}
-main ul li {
-  min-width: 300px;
-  font-size: 1.2rem;
-  margin: 1rem;
-  left: 0;
-}
-
-#about {
-  margin-top: 15%;
-  font-size: 1.5rem;
-}
-#about img {
-  margin: 0.5rem;
-  float: left;
-  width: 250px;
-}
-#about p {
-  line-height: 2rem;
-  text-indent: 3rem;
-}
-@media screen and (width <= 430px) {
-  #about img {
-    display: flex;
-    margin: 0 auto;
-    float: none;
-  }
-}
-
-.top img {
-  width: 3%;
   position: fixed;
-  left: 50%;
-  right: 0;
-  top: 0;
+  justify-content: space-between;
+  max-width: 1250px;
   margin: auto;
-  transition: 0.2s;
-  min-width: 30px;
-}
-.top img:hover {
-  cursor: pointer;
+  left: 0;
+  right: 0;
 }
 
-#skills,
-#projects {
-  margin-top: 50vh;
+.menu {
+  display: flex;
+  font-size: 3rem;
+  width: 0;
+  transition: width .01s;
 }
 
-#projects {
-  min-height: 100vh;
-}
-@media screen and (width < 510px) {
-  #projects ul li p {
-    font-size: 1rem;
-  }
-}
-@media screen and (width > 700px) {
-  #projects ul {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1);
-  }
-}
-@media screen and (width > 1425px) {
-  #projects ul {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1);
-  }
-}
-#projects ul {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto, auto);
-  grid-template-rows: repeat(auto, auto);
-  gap: 1rem;
-}
-#projects p {
-  z-index: 999;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4,
+.menu-5,
+.menu-6,
+.menu-7,
+.menu-8,
+.menu-9,
+.menu-10,
+.menu-11,
+.menu-12,
+.menu-13 {
   position: absolute;
-  font-weight: 900;
-  text-shadow: 0 0 8px black;
+  left: 5rem; /* Initial position */
+  opacity: 0;
+  transition: opacity 0.1s, left 0.3s;
 }
-#projects a img {
-  transition: 0.2s;
-  width: 100%;
-  min-width: 300px;
-  filter: blur(4px);
+
+/* Hover effect */
+.menu:hover .menu-expand a p,
+.menu.menu-open .menu-expand a p {
+  opacity: 100;
 }
-#projects a img:hover {
-  filter: blur(0px);
+
+.menu:hover,
+.menu.menu-open {
+  width: 28rem;
+}
+
+/* Hover and click effect for each menu item */
+.menu:hover .menu-1,
+.menu.menu-open .menu-1 {
+  left: 7.5rem; /* First item moves to 6.5rem */
+}
+.menu:hover .menu-2,
+.menu.menu-open .menu-2 {
+  left: 9rem;   /* Second item moves to 8rem */
+}
+.menu:hover .menu-3,
+.menu.menu-open .menu-3 {
+  left: 10.5rem; /* Third item moves to 9.5rem */
+}
+.menu:hover .menu-4,
+.menu.menu-open .menu-4 {
+  left: 12rem;  /* Fourth item moves to 11rem */
+}
+.menu:hover .menu-5,
+.menu.menu-open .menu-5 {
+  left: 13.5rem; /* Continue increasing by 1.5rem */
+}
+.menu:hover .menu-6,
+.menu.menu-open .menu-6 {
+  left: 16rem;
+}
+.menu:hover .menu-7,
+.menu.menu-open .menu-7 {
+  left: 17.5rem;
+}
+.menu:hover .menu-8,
+.menu.menu-open .menu-8 {
+  left: 19rem;
+}
+.menu:hover .menu-9,
+.menu.menu-open .menu-9 {
+  left: 20.5rem;
+}
+.menu:hover .menu-10,
+.menu.menu-open .menu-10 {
+  left: 22rem;
+}
+.menu:hover .menu-11,
+.menu.menu-open .menu-11 {
+  left: 23.5rem;
+}
+.menu:hover .menu-12,
+.menu.menu-open .menu-12 {
+  left: 25rem;
+}
+.menu:hover .menu-13,
+.menu.menu-open .menu-13 {
+  left: 26.5rem;
+}
+
+.menu-expand {
+  display: flex;
+}
+
+.menu-expand a {
+  left: 10px;
+  margin: 0;
+  transition: margin .3s;
+}
+
+.message-me {
+  margin-top: 0.5rem;
+  font-size: 3rem;
+}
+
+.message-me-moving-padding {
+  position: absolute;
+  z-index: -1;
+  top: 0.4rem;
+  background-color: red;
+  width: 300px;
+  padding: 1px;
+  margin-bottom: 3rem;
+  transition: top 0.5s, width 0.5s;
+}
+
+.message-me:hover .message-me-dropdown {
+  top: 3rem;
+  opacity: 1;
+}
+
+.message-me:hover .message-me-moving-padding {
+  top: 7.2rem;
+  width: 200px;
+}
+
+.message-me-dropdown {
+  padding-top: 1rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s, top 0.5s;
+}
+
+.message-me-dropdown li a img {
+  height: 3rem;
 }

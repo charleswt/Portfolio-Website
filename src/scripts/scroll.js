@@ -19,3 +19,9 @@ function scrollToTop() {
 topButton.addEventListener('click', scrollToTop);
 document.addEventListener('scroll', checkPosition);
 checkPosition();
+
+  const menu = document.querySelector('.menu');
+
+  menu.addEventListener('click', function() {
+    menu.classList.toggle('menu-open');
+  });
