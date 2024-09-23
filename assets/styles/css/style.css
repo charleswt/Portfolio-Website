@@ -59,7 +59,6 @@ header {
   position: fixed;
   justify-content: space-between;
   max-width: 1250px;
-  width: 100%;
   margin: auto;
   left: 0;
   right: 0;
@@ -68,8 +67,12 @@ header {
 .menu {
   display: flex;
   font-size: 3rem;
-  width: 0;
+  width: fit-content; 
   transition: width .01s;
+}
+
+.menu p {
+  padding-bottom: 1px solid red;
 }
 
 .menu-1,
@@ -85,6 +88,7 @@ header {
 .menu-11,
 .menu-12,
 .menu-13 {
+  padding-bottom: 1px solid red;
   position: absolute;
   left: 5rem; /* Initial position */
   opacity: 0;
@@ -214,11 +218,43 @@ header {
 
 /* ABOUT */
 
+
+
+.about-me p, .about-me img {
+  position: absolute;
+  --a: 8deg;
+  aspect-ratio: 1;
+  cursor: pointer;
+  -webkit-mask: 
+    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+    100% 100%/250% 250%;
+}
+
+@keyframes aboutMeP {
+  from {
+    opacity: 0;
+    transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
+  } 
+  to {
+    margin-left: 100px;
+    transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
+  }
+}
+
+@keyframes aboutMeImg {
+  from {
+    transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,0)*var(--a)));
+  } 
+  to {
+    margin-right: 100px;
+    transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
+  }
+}
+
 .about-me img {
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(27, 26, 87) 50%);
   max-height: 450px;
-
-  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
+  animation: aboutMeImg 1s ease-in;
 }
 
 .about-me p {
@@ -227,31 +263,7 @@ header {
   font-size: 1.4rem;
   position: relative;
   max-width: 500px;
-  
-  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
-}
-
-.about-me p, .about-me img {
-  --a: 8deg;
-  aspect-ratio: 1;
-  transition: .4s;
-  cursor: pointer;
-  -webkit-mask: 
-    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
-    100% 100%/250% 250%;
-}
-
-.about-me img {
-  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
-}
-
-.about-me p {
-  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
-}
-
-.about-me img:hover .about-me img {
-    --i: -1;
-  -webkit-mask-position: 0 0;
+  animation: aboutMeP 1s ease-in;
 }
 
 #about {
