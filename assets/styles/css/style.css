@@ -217,6 +217,8 @@ header {
 .about-me img {
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(27, 26, 87) 50%);
   max-height: 450px;
+
+  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
 }
 
 .about-me p {
@@ -225,28 +227,26 @@ header {
   font-size: 1.4rem;
   position: relative;
   max-width: 500px;
+  
+  transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
+}
+
+.about-me p, .about-me img {
+  --a: 8deg;
+  aspect-ratio: 1;
+  transition: .4s;
+  cursor: pointer;
+  -webkit-mask: 
+    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+    100% 100%/250% 250%;
 }
 
 .about-me img {
-  --a: 8deg;
-  aspect-ratio: 1;
   transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
-  -webkit-mask: 
-    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
-    100% 100%/250% 250%;
-  transition: .4s;
-  cursor: pointer;
 }
 
 .about-me p {
-  --a: 8deg;
-  aspect-ratio: 1;
   transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
-  -webkit-mask: 
-    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
-    100% 100%/250% 250%;
-  transition: .4s;
-  cursor: pointer;
 }
 
 .about-me img:hover .about-me img {
