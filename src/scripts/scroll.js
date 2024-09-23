@@ -4,8 +4,7 @@ function checkPosition() {
     let position = window.scrollY
     if (window.scrollY >=31 && topButton.style.display !== "block") {
         topButton.style.display = 'block';
-        console.log('its working')
-    } else if (window.scrollY <=30){
+    } else if (window.scrollY <= 30){
         topButton.style.display = 'none';
     }
 }
