@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: rgb(27, 26, 87);
+  background-color: rgb(88, 85, 230);
   scroll-behavior: smooth;
 }
 
@@ -90,7 +90,7 @@ header {
 .menu-13 {
   padding-bottom: 1px solid red;
   position: absolute;
-  left: 5rem; /* Initial position */
+  left: 5rem;
   opacity: 0;
   transition: opacity 0.1s, left 0.3s;
 }
@@ -109,19 +109,19 @@ header {
 /* Hover and click effect for each menu item */
 .menu:hover .menu-1,
 .menu.menu-open .menu-1 {
-  left: 7.5rem; /* First item moves to 6.5rem */
+  left: 7.5rem;
 }
 .menu:hover .menu-2,
 .menu.menu-open .menu-2 {
-  left: 9rem;   /* Second item moves to 8rem */
+  left: 9rem;
 }
 .menu:hover .menu-3,
 .menu.menu-open .menu-3 {
-  left: 10.5rem; /* Third item moves to 9.5rem */
+  left: 10.5rem;
 }
 .menu:hover .menu-4,
 .menu.menu-open .menu-4 {
-  left: 12rem;  /* Fourth item moves to 11rem */
+  left: 12rem;
 }
 .menu:hover .menu-5,
 .menu.menu-open .menu-5 {
@@ -218,43 +218,42 @@ header {
 
 /* ABOUT */
 
-
-
 .about-me p, .about-me img {
   position: absolute;
   --a: 8deg;
   aspect-ratio: 1;
   cursor: pointer;
-  -webkit-mask: 
-    linear-gradient(135deg,#000c 40%,#000,#000c 60%)
-    100% 100%/250% 250%;
 }
 
 @keyframes aboutMeP {
-  from {
+  0% {
     opacity: 0;
     transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
   } 
-  to {
-    margin-left: 100px;
+  100% {
+    margin-left: 350px;
     transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-2)*var(--a)));
   }
 }
 
 @keyframes aboutMeImg {
-  from {
+  0% {
+    height:10%;
     transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,0)*var(--a)));
   } 
-  to {
-    margin-right: 100px;
+  100% {
+    height: 100%;
+    margin-right: 350px;
     transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,2)*var(--a)));
   }
 }
 
 .about-me img {
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(27, 26, 87) 50%);
+  box-shadow: 3px 3px 8px 20px red;
   max-height: 450px;
-  animation: aboutMeImg 1s ease-in;
+  border-radius: 1rem;
+  animation: aboutMeImg 1s forwards;
 }
 
 .about-me p {
@@ -263,7 +262,7 @@ header {
   font-size: 1.4rem;
   position: relative;
   max-width: 500px;
-  animation: aboutMeP 1s ease-in;
+  animation: aboutMeP 1s forwards;
 }
 
 #about {
@@ -281,4 +280,49 @@ header {
   .about-me p, .about-me img {
     position: none;
   }
+}
+
+/* SKILLS */
+
+#skills {
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.616);
+  margin: 12.5vh 0;
+}
+
+#skills h2 {
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#skills span {
+  display: flex;
+  flex-wrap: wrap; /* Ensures items will wrap if they exceed the width */
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+#skills span div {
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.192);
+  max-width: 30%; /* Each div will take up to 30% of the width to fit 3 on one line */
+  min-width: 250px; /* Minimum width for responsiveness */
+  margin: 1rem; /* Adds spacing between the items */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+  padding: 1rem; /* Adds some inner space */
+}
+
+#skills span div p {
+  line-height: 1.75rem;
+  font-size: .9rem;
+}
+
+#skills span div h3 {
+  font-weight: 300;
+  font-size: 2.3rem;
+  background-color: rgba(255, 0, 0, 0.212);
+  text-decoration: underline red;
 }
