@@ -54,7 +54,7 @@ ul {
 /* NAVIGATION */
 
 header {
-  color: WHITE;
+  color: white;
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -210,13 +210,16 @@ header {
   height: 3rem;
 }
 
-@media screen and (width <= 850px) {
-  header {
+/* ABOUT */
 
-  }
+.top {
+  height: 1px;
 }
 
-/* ABOUT */
+#about, .about-me {
+  height: 100vh;
+  padding: 1px;
+}
 
 .about-me p, .about-me img {
   position: absolute;
@@ -265,10 +268,6 @@ header {
   animation: aboutMeP 1s forwards;
 }
 
-#about {
-  height: 100vh;
-}
-
 .about-me {
   height: 100%;
   display: flex;
@@ -285,12 +284,15 @@ header {
 /* SKILLS */
 
 #skills {
+  margin-top: 12.5vh;
+  padding: 5rem;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.616);
-  margin: 12.5vh 0;
+  height: 75vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(247, 245, 238) 10% 90%);
 }
 
 #skills h2 {
+  margin-top: 0;
   font-weight: bolder;
   font-size: 2rem;
   text-align: center;
@@ -304,29 +306,24 @@ header {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  animation: skillsSlide 1s;
-}
-
-@keyframes skillsSlide{
-  0% {
-
-  }
-  100% {
-
-  }
+  left: -2000px;
+  background-image: linear-gradient(to left, );
+  transition: left 1s;
 }
 
 #skills span div {
   height: fit-content;
-  background-color: rgba(0, 0, 0, 0.192);
-  max-width: 30%; /* Each div will take up to 30% of the width to fit 3 on one line */
-  min-width: 250px; /* Minimum width for responsiveness */
-  margin: 1rem; /* Adds spacing between the items */
-  box-sizing: border-box; /* Ensures padding is included in width calculations */
-  padding: 1rem; /* Adds some inner space */
+  background-color: rgba(0, 0, 0, 0.11);
+  max-width: 30%; 
+  min-width: 250px;
+  margin: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: .3rem;
 }
 
-#skills span div p, #skills span div ul li {
+#skills span div p, 
+#skills span div ul li {
   line-height: 1.75rem;
   font-size: .9rem;
 }
@@ -346,10 +343,17 @@ header {
 #skills span div h3 {
   font-weight: 300;
   font-size: 2.3rem;
-  background-color: rgba(255, 0, 0, 0.212);
+  background-color: rgba(0, 0, 255, 0.253);
   text-decoration: underline red;
 }
 
 #projects img {
   max-height: 450px;
+}
+
+/* PROJECTS */
+
+#projects {
+  width: 100vw;
+  background-color: rgb(247, 245, 238);
 }

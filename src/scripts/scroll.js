@@ -1,7 +1,8 @@
 const topButton = document.querySelector('.top');
+const skillsSlide = document.querySelector('.skills-slide');
+
 
 function checkPosition() {
-    let position = window.scrollY
     if (window.scrollY >=31 && topButton.style.display !== "block") {
         topButton.style.display = 'block';
     } else if (window.scrollY <= 30){
@@ -16,11 +17,17 @@ function scrollToTop() {
 }
 
 topButton.addEventListener('click', scrollToTop);
-document.addEventListener('scroll', checkPosition);
-checkPosition();
+
 
   const menu = document.querySelector('.menu');
 
   menu.addEventListener('click', function() {
     menu.classList.toggle('menu-open');
   });
+
+  window.addEventListener("scroll", (e) => {
+    console.log(scrollY)
+    if(window.scrollY > 190){
+        skillsSlide.style.left = 0;
+    }
+});
