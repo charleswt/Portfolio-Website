@@ -31,20 +31,20 @@ document.getElementById("decrement-btn")
     classManager(position)
 })
 
-const classManager = (pos)=>{
-    let zIndex = 10
+let zIndex = 0
+
+const classManager = (pos = position)=>{
     ids.forEach((proj, index)=>{
         if(index === pos){
             proj.classList.remove("projects-tilt-right")
             proj.classList.remove("projects-tilt-left")
-            proj.style.zIndex = 16
-        }
-        if(index > pos){
-            proj.style.zIndex = zIndex--
+            proj.style.zIndex = 12
+        } else if(index > pos){
+            proj.style.zIndex = (index /= -1) + 6 
             proj.classList.add("projects-tilt-left")
             proj.classList.remove("projects-tilt-right")
         } else if (index < pos){
-            proj.style.zIndex = zIndex++
+            proj.style.zIndex = index += 6
             proj.classList.add("projects-tilt-right")
             proj.classList.remove("projects-tilt-left")
         }
@@ -52,13 +52,7 @@ const classManager = (pos)=>{
         })
 }
 
-ids.forEach((proj, index)=>{
-    if(index > position){
-        proj.classList.add("projects-tilt-left")
-    } else if (index < position){
-        proj.classList.add("projects-tilt-right")
-    }
-    })
+classManager()
 
 if(window.scrollY > 190){
     skillsSlide.style.left = 0;
