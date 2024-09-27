@@ -53,6 +53,17 @@ window.addEventListener("scroll", () => {
 });
 
 const menu = document.querySelector('.menu');
-menu.addEventListener('click', () => {
+
+// Toggle the menu when clicked
+menu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the click from propagating to document
     menu.classList.toggle('menu-open');
+});
+
+// Close the menu when clicking outside
+document.addEventListener('click', (event) => {
+    // Check if the click target is outside the menu
+    if (!menu.contains(event.target)) {
+        menu.classList.remove('menu-open'); // Close the menu
+    }
 });
