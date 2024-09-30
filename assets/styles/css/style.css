@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: rgb(88, 85, 230);
+  background-color: rgb(28, 28, 66);
   scroll-behavior: smooth;
 }
 
@@ -55,7 +55,6 @@ ul {
 
 header {
   color: white;
-  text-shadow: 0px 0px 5px blue;
   z-index: 100;
   display: flex;
   position: fixed;
@@ -75,6 +74,87 @@ header {
 
 .menu p {
   padding-bottom: 1px solid red;
+}
+
+@media screen and (width < 750px) {
+
+  .menu, .message-me {
+    margin: 0 .5rem;
+  }
+
+  .menu:hover .menu-expand a p,
+  .menu.menu-open .menu-expand a p {
+    opacity: 100;
+  }
+
+  .menu p {
+    font-size: 1.6rem;
+  }
+
+  .menu-expand p {
+    font-size: 1.4rem;
+  }
+
+  .menu-expand {
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+  
+  /* Adjust the left positioning to scale down with the font-size */
+
+  /* Adjust hover effects for smaller screens */
+  .menu:hover .menu-1,
+  .menu.menu-open .menu-1 {
+    left: 0rem;
+  }
+  .menu:hover .menu-2,
+  .menu.menu-open .menu-2 {
+    left: 1rem;
+  }
+  .menu:hover .menu-3,
+  .menu.menu-open .menu-3 {
+    left: 2rem;
+  }
+  .menu:hover .menu-4,
+  .menu.menu-open .menu-4 {
+    left: 3rem;
+  }
+  .menu:hover .menu-5,
+  .menu.menu-open .menu-5 {
+    left: 4rem;
+  }
+  .menu:hover .menu-6,
+  .menu.menu-open .menu-6 {
+    left: 5rem;
+  }
+  .menu:hover .menu-7,
+  .menu.menu-open .menu-7 {
+    left: 6rem;
+  }
+  .menu:hover .menu-8,
+  .menu.menu-open .menu-8 {
+    left: 7rem;
+  }
+  .menu:hover .menu-9,
+  .menu.menu-open .menu-9 {
+    left: 8rem;
+  }
+  .menu:hover .menu-10,
+  .menu.menu-open .menu-10 {
+    left: 9rem;
+  }
+  .menu:hover .menu-11,
+  .menu.menu-open .menu-11 {
+    left: 10rem;
+  }
+  .menu:hover .menu-12,
+  .menu.menu-open .menu-12 {
+    left: 11rem;
+  }
+  .menu:hover .menu-13,
+  .menu.menu-open .menu-13 {
+    left: 12rem;
+  }
 }
 
 .menu-1,
@@ -98,7 +178,9 @@ header {
 }
 
 /* Hover effect */
-.menu:hover .menu-expand a p,
+
+@media screen and (width >= 750px) {
+  .menu:hover .menu-expand a p,
 .menu.menu-open .menu-expand a p {
   opacity: 100;
 }
@@ -127,7 +209,7 @@ header {
 }
 .menu:hover .menu-5,
 .menu.menu-open .menu-5 {
-  left: 13.5rem; /* Continue increasing by 1.5rem */
+  left: 13.5rem;
 }
 .menu:hover .menu-6,
 .menu.menu-open .menu-6 {
@@ -161,9 +243,11 @@ header {
 .menu.menu-open .menu-13 {
   left: 26.5rem;
 }
+}
 
 .menu-expand {
   display: flex;
+  flex-direction: column;
 }
 
 .menu-expand a {
@@ -172,9 +256,19 @@ header {
   transition: margin .3s;
 }
 
+.menu-expand p {
+  color: antiquewhite;
+}
+
 .message-me {
   margin-top: 0.5rem;
   font-size: 3rem;
+}
+
+@media screen and (width < 750px) {
+  .message-me {
+    font-size: 1.6rem;
+  }  
 }
 
 .message-me-moving-padding {
@@ -231,7 +325,7 @@ header {
 }
 
 .about-me img {
-  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(27, 26, 87) 50%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(28, 28, 66) 50%);
   box-shadow: 3px 3px 8px 20px red;
   border-radius: 1rem;
   animation: aboutMeImg 1s forwards;
@@ -258,10 +352,11 @@ header {
   .about-me img {
     max-height: 40%;
     font-size: .7rem;
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(27, 26, 87) 80%);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(28, 28, 66) 80%);
   }
 
   .about-me {
+    height: 55%;
     display: flex;
     flex-direction: column;
   }
@@ -333,12 +428,15 @@ header {
 #skills {
   margin-top: 12.5vh;
   padding: 5rem;
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(247, 245, 238) 10% 90%);
+  background-image: linear-gradient(to bottom, rgb(28, 28, 66), rgb(66, 66, 145) 10% 90%);
 }
 
+
+
 #skills h2 {
+  color: white;
   margin-top: 0;
   font-weight: bolder;
   font-size: 2rem;
@@ -346,11 +444,12 @@ header {
 }
 
 #skills span {
+  max-width: 1450px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   left: -2000px;
@@ -369,6 +468,16 @@ header {
   border-radius: .3rem;
 }
 
+@media screen and (width<900px) {
+  #skills span div {
+    max-width: 100%;
+    margin: .5rem;
+ }
+ #skills {
+  padding: 5rem 1rem;
+ }
+}
+
 #skills span div p, 
 #skills span div ul li {
   line-height: 1.75rem;
@@ -380,17 +489,23 @@ header {
   flex-wrap: wrap;
 }
 
-#skills span div ul li {
+#skills span div ul li, #skills span div p {
   margin: 0 1rem;
+  color: white;
+}
+
+#skills span div ul li {
   text-decoration: underline;
-  line-height: 1.75rem;
-  font-size: .9rme;
 }
 
 #skills span div h3 {
+  line-height: 2.5rem;
+  border-radius: .3rem;
+  padding: .2rem;
   font-weight: 300;
   font-size: 2.3rem;
-  background-color: rgba(0, 0, 255, 0.253);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
   text-decoration: underline red;
 }
 
@@ -405,7 +520,7 @@ header {
   width: 100vw;
   height: 100%;
   min-height: 50vh;
-  background-color: rgb(247, 245, 238);
+  background-color: rgb(66, 66, 145);
   text-align: center;
 }
 
@@ -422,15 +537,36 @@ header {
 }
 
 .projects-transition {
+  display: flex;
   height: 100%;
   position: relative;
   top: 40px;
-  width: max-content;
+  width: 100%;
   --a: 8deg;
   aspect-ratio: 1;
   height: 300px;
   transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,0)*var(--a)));
   transition: transform 0.45s, height 0.45s, top 0.45s;
+}
+
+.increment-btn, .decrement-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  bottom: 0;
+  width: 10%;
+  z-index: 20;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.425);
+  backdrop-filter: blur(8px);
+  color: white;
+  height: 0%;
+  opacity: 0;
+  transition: height 0.45s ease-in-out, opacity 0.45s ease-in-out;
+}
+
+.increment-btn {
+  right: 0;
 }
 
 .projects-tilt-right {
@@ -448,17 +584,6 @@ header {
   transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-5)*var(--a)));
 }
 
-.project-nav-btn {
-  z-index: 20;
-  position: absolute;
-  left: 0;right: 0;bottom: 0;top: 500;
-  height: 100px;
-}
-
-.project-nav-btn button {
-  width: 100px;
-}
-
 .project-details {
   color: white;
   font-size: 1.2rem;
@@ -467,7 +592,8 @@ header {
   z-index: 1;
   position: absolute;
   bottom: 0;right: 0;left: 0;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   height: 0%;
   transition: height 0.45s ease-in-out;
 }
@@ -477,7 +603,7 @@ header {
   transition: opacity 0.45s ease-in-out;
 }
 
-.project-details.show p {
+.project-details.show p, .increment-btn.show, .decrement-btn.show {
   opacity: 1;
 }
 
