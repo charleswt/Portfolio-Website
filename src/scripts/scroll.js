@@ -1,8 +1,6 @@
 const skillsSlide = document.querySelector(".skills-slide");
-const projectUl = document.querySelector(".project-ul-position");
 const projects = Array.from(document.querySelectorAll(".projects-transition"));
-const projectsUl = Array.from(document.querySelectorAll(".project-ul-position")
-);
+const projectsUl = Array.from(document.querySelectorAll(".project-ul-position"));
 
 let position = JSON.parse(localStorage.getItem("pos")) ?? 0;
 
@@ -67,15 +65,14 @@ function detailsClassManager (pos = position) {
 }
 
 const imgPositionClassManager = (pos = position) => {
-    projects.forEach((proj, index) => {
-      const img = proj.querySelector(".projects-transition");
-      if (index === pos && img) {
-        img.style.left = "0"; img.style.right = "0";
-      } else if (img) {
-        img.style.left = "none"; img.style.right = "none";
-      }
-    });
-  };
+  projectsUl.forEach((proj, index) => {
+    if (index === pos) {
+      proj.classList.add("selected-project-position");
+    } else {
+      proj.classList.remove("selected-project-position");
+    }
+  });
+};
 
 detailsClassManager();
 imgPositionClassManager()
