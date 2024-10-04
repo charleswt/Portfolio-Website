@@ -155,6 +155,34 @@ header {
   .menu.menu-open .menu-13 {
     left: 12rem;
   }
+  .menu:hover .menu-14,
+  .menu.menu-open .menu-14 {
+    left: 12rem;
+  }
+  .menu:hover .menu-15,
+  .menu.menu-open .menu-15 {
+    left: 12rem;
+  }
+  .menu:hover .menu-16,
+  .menu.menu-open .menu-16 {
+    left: 12rem;
+  }
+  .menu:hover .menu-17,
+  .menu.menu-open .menu-17 {
+    left: 12rem;
+  }
+  .menu:hover .menu-18,
+  .menu.menu-open .menu-18 {
+    left: 12rem;
+  }
+  .menu:hover .menu-19,
+  .menu.menu-open .menu-19 {
+    left: 12rem;
+  }
+  .menu:hover .menu-20,
+  .menu.menu-open .menu-20 {
+    left: 12rem;
+  }
 }
 
 .menu-1,
@@ -169,7 +197,14 @@ header {
 .menu-10,
 .menu-11,
 .menu-12,
-.menu-13 {
+.menu-13,
+.menu-14,
+.menu-15,
+.menu-16,
+.menu-17,
+.menu-18,
+.menu-19,
+.menu-20 {
   padding-bottom: 1px solid red;
   position: absolute;
   left: 5rem;
@@ -237,11 +272,39 @@ header {
 }
 .menu:hover .menu-12,
 .menu.menu-open .menu-12 {
-  left: 25rem;
+  left: 26rem;
 }
 .menu:hover .menu-13,
 .menu.menu-open .menu-13 {
-  left: 26.5rem;
+  left: 27.5rem;
+}
+.menu:hover .menu-14,
+.menu.menu-open .menu-14 {
+  left: 29rem;
+}
+.menu:hover .menu-15,
+.menu.menu-open .menu-15 {
+  left: 30.5rem;
+}
+.menu:hover .menu-16,
+.menu.menu-open .menu-16 {
+  left: 32rem;
+}
+.menu:hover .menu-17,
+.menu.menu-open .menu-17 {
+  left: 33.5rem;
+}
+.menu:hover .menu-18,
+.menu.menu-open .menu-18 {
+  left: 35rem;
+}
+.menu:hover .menu-19,
+.menu.menu-open .menu-19 {
+  left: 36.5rem;
+}
+.menu:hover .menu-20,
+.menu.menu-open .menu-20 {
+  left: 38rem;
 }
 }
 
