@@ -584,7 +584,8 @@ header {
   transform: perspective(1000px) rotate3d(var(--r,0,1),0,calc(var(--i,-5)*var(--a)));
 }
 
-.project-details {
+@media screen and (min-height: 900px) {
+  .project-details {
   color: white;
   font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.425);
@@ -598,6 +599,31 @@ header {
   transition: height 0.45s ease-in-out;
 }
 
+.project-details-header {
+  font-size: 1.8rem;
+}
+}
+
+@media screen and (max-height: 900px) {
+  .project-details {
+  color: white;
+  font-size: .8rem;
+  background-color: rgba(0, 0, 0, 0.425);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  position: absolute;
+  bottom: 0;right: 0;left: 0;
+  margin: auto;
+  width: 80%;
+  height: 0%;
+  transition: height 0.45s ease-in-out;
+}
+
+.project-details-header {
+  font-size: 1.4em;
+}
+}
+
 .project-details p {
   opacity: 0;
   transition: opacity 0.45s ease-in-out;
@@ -609,18 +635,26 @@ header {
   opacity: 1;
 }
 
-.selected-project-position.show {
-  left: -1000px;
-  box-shadow: 3px 3px 3px black;
-  border-top: 3rem solid red;
-  color: red;
+@media screen and (width < 900px) {
+  .selected-project-position.move {
+    margin: 0 auto;
+    position: absolute;
+    width: 220px;
+    height: 170px;
+  }
 }
 
-.project-details-header {
-  font-size: 1.8rem;
+@media screen and (width >= 900px) {
+  .selected-project-position.move {
+    margin: 0 auto;
+    position: absolute;
+    width: 220px;
+    height: 300px;
+  }
 }
 
 .project-ul-position {
+  padding: 30%;
   width: 100%;
   background-color: aqua;
 }

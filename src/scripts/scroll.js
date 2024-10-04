@@ -1,6 +1,6 @@
 const skillsSlide = document.querySelector(".skills-slide");
 const projects = Array.from(document.querySelectorAll(".projects-transition"));
-const projectsUl = Array.from(document.querySelectorAll(".project-ul-position"));
+const projectsUl = Array.from(document.querySelectorAll(".selected-project-position"));
 
 let position = JSON.parse(localStorage.getItem("pos")) ?? 0;
 
@@ -67,15 +67,15 @@ function detailsClassManager (pos = position) {
 const imgPositionClassManager = (pos = position) => {
   projectsUl.forEach((proj, index) => {
     if (index === pos) {
-      proj.classList.add("selected-project-position");
+      proj.classList.add("move");
     } else {
-      proj.classList.remove("selected-project-position");
+      proj.classList.remove("move");
     }
   });
 };
 
 detailsClassManager();
-imgPositionClassManager()
+imgPositionClassManager();
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 190) skillsSlide.style.left = "0";
