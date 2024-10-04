@@ -626,7 +626,7 @@ header {
 
 .project-details p {
   opacity: 0;
-  transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out .25s;
 }
 
 .project-details.show p, 
