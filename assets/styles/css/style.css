@@ -205,7 +205,6 @@ header {
 .menu-18,
 .menu-19,
 .menu-20 {
-  padding-bottom: 1px solid red;
   position: absolute;
   left: 5rem;
   opacity: 0;
@@ -338,7 +337,7 @@ header {
   position: absolute;
   z-index: -1;
   top: 0.4rem;
-  background-color: red;
+  background-color: rgb(175, 0, 0);
   width: 300px;
   padding: 1px;
   margin-bottom: 3rem;
@@ -571,7 +570,7 @@ header {
   font-size: 2.3rem;
   color: white;
   background-color: rgba(255, 255, 255, 0.15);
-  text-decoration: underline red;
+  text-decoration: underline rgb(175, 0, 0);
 }
 
 #projects img {
