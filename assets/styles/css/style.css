@@ -656,5 +656,11 @@ header {
 .project-ul-position {
   padding: 30%;
   width: 100%;
-  background-color: aqua;
+}
+
+@media screen and (width > 1300px) {
+  .project-ul-position {
+    padding: 20%;
+    width: 100%;
+  }
 }
