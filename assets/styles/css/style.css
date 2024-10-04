@@ -614,6 +614,7 @@ header {
 }
 
 .increment-btn, .decrement-btn {
+  padding: 0 3px;
   display: flex;
   align-items: center;
   justify-content: center;
