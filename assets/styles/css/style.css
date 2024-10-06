@@ -76,7 +76,7 @@ header {
   padding-bottom: 1px solid red;
 }
 
-@media screen and (width < 750px) {
+@media screen and (width < 900px) {
 
   .menu, .message-me {
     margin: 0 .5rem;
@@ -125,63 +125,63 @@ header {
   }
   .menu:hover .menu-6,
   .menu.menu-open .menu-6 {
-    left: 5rem;
+    left: 5.5rem;
   }
   .menu:hover .menu-7,
   .menu.menu-open .menu-7 {
-    left: 6rem;
+    left: 6.5rem;
   }
   .menu:hover .menu-8,
   .menu.menu-open .menu-8 {
-    left: 7rem;
+    left: 7.5rem;
   }
   .menu:hover .menu-9,
   .menu.menu-open .menu-9 {
-    left: 8rem;
+    left: 8.5rem;
   }
   .menu:hover .menu-10,
   .menu.menu-open .menu-10 {
-    left: 9rem;
+    left: 9.5rem;
   }
   .menu:hover .menu-11,
   .menu.menu-open .menu-11 {
-    left: 10rem;
+    left: 10.5rem;
   }
   .menu:hover .menu-12,
   .menu.menu-open .menu-12 {
-    left: 11rem;
+    left: 12rem;
   }
   .menu:hover .menu-13,
   .menu.menu-open .menu-13 {
-    left: 12rem;
+    left: 13rem;
   }
   .menu:hover .menu-14,
   .menu.menu-open .menu-14 {
-    left: 12rem;
+    left: 14rem;
   }
   .menu:hover .menu-15,
   .menu.menu-open .menu-15 {
-    left: 12rem;
+    left: 15rem;
   }
   .menu:hover .menu-16,
   .menu.menu-open .menu-16 {
-    left: 12rem;
+    left: 16rem;
   }
   .menu:hover .menu-17,
   .menu.menu-open .menu-17 {
-    left: 12rem;
+    left: 17rem;
   }
   .menu:hover .menu-18,
   .menu.menu-open .menu-18 {
-    left: 12rem;
+    left: 18rem;
   }
   .menu:hover .menu-19,
   .menu.menu-open .menu-19 {
-    left: 12rem;
+    left: 19rem;
   }
   .menu:hover .menu-20,
   .menu.menu-open .menu-20 {
-    left: 12rem;
+    left: 20rem;
   }
 }
 
@@ -213,7 +213,7 @@ header {
 
 /* Hover effect */
 
-@media screen and (width >= 750px) {
+@media screen and (width >= 900px) {
   .menu:hover .menu-expand a p,
 .menu.menu-open .menu-expand a p {
   opacity: 100;
@@ -319,6 +319,7 @@ header {
 }
 
 .menu-expand p {
+  margin-left: .5rem;
   color: antiquewhite;
 }
 
@@ -327,7 +328,7 @@ header {
   font-size: 3rem;
 }
 
-@media screen and (width < 750px) {
+@media screen and (width < 900px) {
   .message-me {
     font-size: 1.6rem;
   }  
@@ -583,15 +584,17 @@ header {
   color: white;
   z-index: -10;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   min-height: 50vh;
   background-color: rgb(39, 39, 56);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #projects ul {
   display: flex;
-  height: auto;
   position: relative;
   justify-content: center;
   overflow: hidden;
