@@ -82,14 +82,24 @@ window.addEventListener("scroll", () => {
 });
 
 const menu = document.querySelector(".menu");
+let navState = false;
 
-menu.addEventListener("click", (event) => {
-  event.stopPropagation();
-  menu.classList.toggle("menu-open");
-});
+Array.from(document.querySelectorAll(".exit-listener")).forEach((btn)=>{
+  btn.addEventListener("click",()=>{
+    if (navState === true) {
+      menu.classList.remove("menu-open");
+      navState = false
+    } else {
+      navState = true
+      menu.classList.toggle("menu-open");
+    }
+  })
+
+})
 
 document.addEventListener("click", (event) => {
   if (!menu.contains(event.target)) {
+    console.log(event.target)
     menu.classList.remove("menu-open");
   }
-});
+});  

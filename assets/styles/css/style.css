@@ -74,6 +74,16 @@ header {
 
 .menu p {
   padding-bottom: 1px solid red;
+}  
+
+header {
+  backdrop-filter: blur(8px);
+  padding: 0rem;
+  transition: padding .2s;
+}
+
+.exit-listener {
+  z-index: 100;
 }
 
 @media screen and (width < 900px) {
@@ -96,7 +106,7 @@ header {
   }
 
   .menu-expand {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     flex-direction: column;
   }
   
